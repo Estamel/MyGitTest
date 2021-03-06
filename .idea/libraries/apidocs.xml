@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="apidocs">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/docs/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/docs/benchmarks/xpath" />
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/src/java" />
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/src/samples" />
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/src/test" />
+      <root url="jar://$PROJECT_DIR$/day020/lib/dom4j-1.6.1.jar!/dom4j-1.6.1/xdocs/benchmarks/xpath" />
+    </SOURCES>
+  </library>
+</component>

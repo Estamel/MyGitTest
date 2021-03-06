@@ -1,0 +1,30 @@
+1.File{
+        用来封装一个文件路径
+        是一个文件路径名的抽象表示
+        可以封装一个不存在的路径名
+        有三个构造方法(String,String),(File,String),(String)
+        绝对路径→以盘符为开头的完整路径
+        相对路径→简化路径，相对于当前项目下
+        File创建功能{
+            两个方法→(createNewFile())在当前File路径下新建一个文件
+                    →(mkdirs())以当前File路径生成多级文件夹
+        }
+        当使用File.delete()时只能删除空文件夹，可以使用递归来删除所有文件
+
+}
+2.IO字节流{
+        字节流一般用于操作二进制文件或者不清楚文件类型的文件
+        构造方法→InputStream is = new BufferedInputStream(new FileInputStream("XXXXX"));
+        对于用is.readAllBytes方法得到的bytes数组，可以调用String的有参构造方法new String(bytes,0,长度),使用UTF-8编码格式来解码整个bytes数组
+        is.read()得到的是当前单个字节,is.read(bytes)得到的是成功读取的字节数,若返回-1则代表文件已读取到末尾,所以需要增加一个判断
+        is.close关流(一定要记得关流！！！！！！！！！！！！！！！！！)
+        当有需要使用try&catch时可以使用(try(InputStream is = new BufferedInputStream(new FileInputStream("XXXXX"))catch{}))来避免使用final,使用这个方法
+        可以在catch后自动执行关流操作
+        is.read()方法是逐个提取字节然后将其强转为int类型,write(is.read())方法是将is.read()强转后的int数据再强转为byte类型再写入目标文件
+}
+3.IO字符流{
+        专用于操作仅含字符的文件
+        getBytes("编码方式")方法是将输入的String字符串使用IDEA默认编码方式(UTF-8)强转为字节码，所以解码时也需要使用UTF-8进行解码
+        String(byte[] bytes)使用平台的默认字符集解码指定的字节数组来创建字符串
+        ObjectInputStream读到文件末尾时会抛出一个错误，可以用try/catch捕获错误来得知文件已经读取完毕
+}

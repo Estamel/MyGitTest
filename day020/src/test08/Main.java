@@ -5,5 +5,6 @@ public class Main {
         System.out.println(Season.SPRING.toString());
         System.out.println(Season.SUMMER.toString());
         System.out.println(Season.SUMMER.toString());
+        System.out.println(Season.SUMMER.toString());
     }
 }
